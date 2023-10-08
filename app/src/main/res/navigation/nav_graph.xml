@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.endava.parking.ui.welcomescreen.WelcomeFragment"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"/>
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_SignInFragment"
+            app:destination="@id/signInFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.endava.parking.ui.signup.SignUpFragment"
+        android:label="Create An Account"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_parkingLotsFragment"
+            app:destination="@id/parkingLotsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.endava.parking.ui.signin.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_forgotPasswordFragment"
+            app:destination="@id/restorePassword"/>
+        <action
+            android:id="@+id/action_signInFragment_to_parkingLotsFragment"
+            app:destination="@id/parkingLotsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restorePassword"
+        android:name="com.endava.parking.ui.restorepassword.RestorePassFragment"
+        android:label="Restore Password"
+        tools:layout="@layout/fragment_restore_pass">
+    </fragment>
+
+    <fragment
+        android:id="@+id/parkingLotsFragment"
+        android:name="com.endava.parking.ui.parkinglots.ParkingLotsFragment"
+        android:label="Parking Lots"
+        tools:layout="@layout/fragment_parking_lots">
+        <action
+            android:id="@+id/action_parkingLotsFragment_to_mockFragment"
+            app:destination="@id/mockFragment"/>
+        <action
+            android:id="@+id/action_parkingLotsFragment_to_fragmentCreateParkingLot"
+            app:destination="@id/fragmentCreateParkingLot"/>
+        <argument
+            android:name="userrole"
+            app:argType="com.endava.parking.data.model.UserRole"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mockFragment"
+        android:name="com.endava.parking.ui.mockscreen.MockFragment"
+        android:label="Mock Fragment"
+        tools:layout="@layout/fragment_mock">
+        <argument
+            android:name="parkinglot"
+            app:argType="com.endava.parking.data.model.ParkingLot"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCreateParkingLot"
+        android:name="com.endava.parking.ui.createparkinglot.FragmentCreateParkingLot"
+        android:label="CreateLot"
+        tools:layout="@layout/create_parking_layout">
+        <argument
+            android:name="role"
+            app:argType="com.endava.parking.data.model.UserRole"/>
+        <action
+            android:id="@+id/action_fragment_CreateParkingLot_to_mockFragment"
+            app:destination="@id/mockFragment"/>
+    </fragment>
+</navigation>

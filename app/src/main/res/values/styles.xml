@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Button style-->
+    <style name="Button" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/mulish_900</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="backgroundTint">@color/tint_primary_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Secondary">
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="strokeColor">@color/gray</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+
+    <!--    Toolbar style-->
+    <style name="Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:paddingHorizontal">@dimen/padding_large</item>
+    </style>
+
+    <style name="Toolbar.Title">
+        <item name="android:textSize">@dimen/text_xlarge</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleText</item>
+        <item name="titleCentered">true</item>
+    </style>
+
+    <style name="ToolbarTitleText">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/mulish_900</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">-0.05</item>
+    </style>
+
+
+    <!--    Input style-->
+    <style name="Input" parent="ThemeOverlay.Material3.TextInputEditText.OutlinedBox" />
+
+    <style name="Input.Primary">
+        <item name="android:paddingHorizontal">@dimen/padding_medium</item>
+        <!--    text color for big hints-->
+        <item name="android:textColorHint">@color/black_30</item>
+        <!--    fontFamily for both small hint and big hint-->
+        <item name="android:fontFamily">@font/mulish_400</item>
+    </style>
+
+    <!--    Parking search input style-->
+    <style name="Input.Secondary">
+        <item name="android:paddingHorizontal">@dimen/padding_medium</item>
+        <!--    text color for big hints-->
+        <item name="android:textColorHint">@color/tint_example_hint</item>
+        <!--    fontFamily for both small hint and big hint-->
+        <item name="android:fontFamily">@font/mulish_400</item>
+        <!--    textSize for both text and big hint-->
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <!--    Corner radius-->
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+    </style>
+
+    <!--    TextInputLayout style-->
+    <style name="TextInputLayout">
+        <item name="expandedHintEnabled">false</item>
+        <!--    text color for small hint-->
+        <item name="hintTextColor">@color/tint_small_hint</item>
+        <!--    text size for small hints-->
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <item name="boxStrokeColor">@color/tint_stroke_input</item>
+        <item name="boxStrokeWidthFocused">@dimen/stroke_tiny</item>
+        <item name="errorTextAppearance">@style/InputError</item>
+    </style>
+
+    <!--    Text size for small hints-->
+    <style name="HintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+
+<!--    Input Error Message-->
+    <style name="InputError">
+        <item name="hintTextColor">@color/pomegranate</item>
+        <item name="boxStrokeColor">@color/pomegranate</item>
+    </style>
+
+
+    <!--    TextView style-->
+    <style name="Text" parent="Widget.AppCompat.TextView"/>
+
+    <style name="TextMediumCentered" parent="Text">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/mulish_400</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="TextMedium" parent="Text">
+        <item name="fontFamily">@font/mulish_400</item>
+        <item name="android:textColor">@color/sonic_silver</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextMediumHeader" parent="Text">
+        <item name="fontFamily">@font/mulish_700</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="TextMediumBlack" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/mulish_400</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_medium_extra</item>
+    </style>
+
+    <style name="Text.TextSmallGray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+
+    <!--    TextButton style-->
+    <style name="Text.Button" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/tint_add_level_button</item>
+    </style>
+
+    <style name="Text.Button.Light">
+        <item name="android:fontFamily">@font/mulish_300</item>
+    </style>
+
+    <style name="Text.Button.Bold">
+        <item name="android:fontFamily">@font/mulish_700</item>
+    </style>
+
+
+<!--    Checkbox style-->
+    <style name="CheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="theme">@style/MyCheckboxColor</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:fontFamily">@font/mulish_400</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MyCheckboxColor" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/pomegranate</item>
+        <item name="android:textColorSecondary">@color/black_38</item>
+    </style>
+
+
+    <!--    TabLayout style-->
+    <style name="TabLayoutStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/TabTopic</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorColor">@color/pomegranate</item>
+        <item name="tabIndicatorFullWidth">true</item>
+    </style>
+
+    <style name="TabTopic" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/text_medium_extra</item>
+        <item name="fontFamily">@font/mulish_700</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+
+    <!--    Bottom sheet dialog style-->
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+    <style name="PopupDialog">
+        <item name="android:background">@drawable/pop_up_background</item>
+    </style>
+
+</resources>
